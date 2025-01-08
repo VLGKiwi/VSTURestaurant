@@ -1,6 +1,92 @@
 @use '@styles/func';
-@use '@styles/mixins';
+@use '@styles/mixins' as *;
 
 .root {
+	display: flex;
+	justify-content: space-between;
 
+	.text {
+		font-family: var(--font-inder);
+		font-size: 36px;
+		line-height: 150%;
+
+		border-left: 2px solid black;
+
+		padding: 21px 66px;
+
+		height: max-content;
+
+		@include desktop {
+			font-size: 24px;
+		}
+
+		@include tablet {
+			padding: 21px 33px;
+		}
+
+		@include tablet-small {
+			font-size: 16px;
+		}
+	}
+
+	.left {
+		display: flex;
+		height: 100%;
+
+		.logo {
+			display: flex;
+			align-items: center;
+			padding: 15px 16px;
+
+			svg {
+				width: 138px;
+				height: 57px;
+
+				@include desktop {
+					width: 100px;
+					height: 40px;
+				}
+
+				@include tablet-small {
+					height: 30px;
+					width: 80px;
+				}
+			}
+		}
+	}
+
+	.right {
+		display: flex;
+		max-height: 96px;
+
+		@include desktop {
+			height: max-content;
+		}
+
+		.text {
+			border-right: 2px solid black;
+		}
+
+		.img {
+			@include desktop {
+				height: 78px;
+			}
+
+			@include tablet-small {
+				height: 66px;
+			}
+
+			img {
+				@include desktop {
+					height: 78px;
+					width: 150px;
+				}
+
+				@include tablet-small {
+					height: 66px;
+					width: 115px;
+				}
+			}
+		}
+	}
 }

@@ -8,7 +8,7 @@ const Home: FC<HomeProps> = ({ className }) => {
   const rootClassName = classNames(styles.root, className)
 
   return (
-    <main className={rootClassName}>
+    <main className={rootClassName} style={{borderTop: "2px solid black"}}>
 
     </main>
   )
