@@ -52,7 +52,7 @@ export default function RootLayout({
     <html lang="ru">
       <body className={`${inder.className} ${indie.className} ${medieval.className} ${raleway.className}`}>
         <Provider>
-          <div id="root">
+          <div id="root" style={{backgroundColor: '#E1CFA8'}}>
             <Header />
             {children}
             <Footer />
