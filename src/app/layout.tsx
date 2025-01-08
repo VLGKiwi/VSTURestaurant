@@ -8,28 +8,7 @@ import localFont from 'next/font/local'
 import { Provider } from '@service/provider'
 
 const font = localFont({
-  src: [
-    {
-      path: './fonts/neuemachina-light.woff2',
-      weight: '500',
-      style: 'normal'
-    },
-    {
-      path: './fonts/neuemachina-regular.woff2',
-      weight: '400',
-      style: 'normal'
-    },
-    {
-      path: './fonts/neuemachina-medium.woff2',
-      weight: '500',
-      style: 'normal'
-    },
-    {
-      path: './fonts/neuemachina-ultrabold.woff2',
-      weight: '800',
-      style: 'normal'
-    }
-  ]
+  
 })
 
 export default function RootLayout({
