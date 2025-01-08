@@ -7,29 +7,40 @@ import '@styles/global.scss'
 import localFont from 'next/font/local'
 import { Provider } from '@service/provider'
 
-const font = localFont({
-  src: [
-    {
-      path: './fonts/neuemachina-light.woff2',
-      weight: '500',
-      style: 'normal'
-    },
-    {
-      path: './fonts/neuemachina-regular.woff2',
-      weight: '400',
-      style: 'normal'
-    },
-    {
-      path: './fonts/neuemachina-medium.woff2',
-      weight: '500',
-      style: 'normal'
-    },
-    {
-      path: './fonts/neuemachina-ultrabold.woff2',
-      weight: '800',
-      style: 'normal'
-    }
-  ]
+const inder = localFont({
+  src: [{
+    path: './fonts/Inder-Regular.woff2',
+    weight: '400',
+    style: 'normal'
+  }],
+  variable: '--font-inder'
+})
+
+const indie = localFont({
+  src: [{
+    path: './fonts/IndieFlower-Regular.woff2',
+    weight: '400',
+    style: 'normal'
+  }],
+  variable: '--font-indie'
+})
+
+const medieval = localFont({
+  src: [{
+    path: './fonts/MedievalSharp-Regular.woff2',
+    weight: '400',
+    style: 'normal'
+  }],
+  variable: '--font-med'
+})
+
+const raleway = localFont({
+  src: [{
+    path: './fonts/RalewayDots-Regular.woff2',
+    weight: '400',
+    style: 'normal'
+  }],
+  variable: '--font-raleway'
 })
 
 export default function RootLayout({
@@ -39,7 +50,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={font.className}>
+      <body className={`${inder.className} ${indie.className} ${medieval.className} ${raleway.className}`}>
         <Provider>
           <div id="root">
             <Header />

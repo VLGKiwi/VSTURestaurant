@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import { HomeView } from '@views/home'
 
 export const metadata: Metadata = {
-  title: 'Home',
-  description: 'Legion Next.js template'
+  title: 'Daimyo',
+  description: 'Daimyo'
 }
 
 export default function Home() {
