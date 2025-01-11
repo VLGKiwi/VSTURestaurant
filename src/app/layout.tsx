@@ -6,6 +6,7 @@ import '@styles/global.scss'
 
 import localFont from 'next/font/local'
 import { Provider } from '@service/provider'
+import { CartProvider } from '@/components/cartProvider/cartProvider'
 
 const inder = localFont({
   src: [{
@@ -50,15 +51,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={`${inder.className} ${indie.className} ${medieval.className} ${raleway.className}`}>
+      <body className={`${inder.variable} ${indie.variable} ${medieval.variable} ${raleway.variable}`}>
         <Provider>
-          <div id="root" style={{backgroundColor: '#E1CFA8'}}>
-            <Header />
-            {children}
-            <Footer />
-          </div>
+          <CartProvider>
+            <div id="root" style={{backgroundColor: '#E1CFA8'}}>
+              <Header />
+              {children}
+              <Footer />
+            </div>
 
-          <div id="modal-root" />
+            <div id="modal-root" />
+          </CartProvider>
         </Provider>
       </body>
     </html>
