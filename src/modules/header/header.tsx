@@ -5,6 +5,7 @@ import styles from './header.module.scss'
 import { HeaderProps } from './header.types'
 import LogoDaimyo from '@icons/logo.svg'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Header: FC<HeaderProps> = ({ className }) => {
 
@@ -14,19 +15,24 @@ const Header: FC<HeaderProps> = ({ className }) => {
     <header className={headerClassName}>
       <div className={styles.left}>
         <div className={styles.logo}>
-          <LogoDaimyo />
+          <Link href={'/'}>
+            <LogoDaimyo />
+          </Link>
         </div>
         <div>
           <p className={styles.text}>
             About
           </p>
+          <Link href={'/admin'}>
+            admin
+          </Link>
         </div>
       </div>
       <div className={styles.right}>
         <div>
-          <button className={styles.text}>
+          <Link href='/cart' className={styles.text}>
             CART
-          </button>
+          </Link>
         </div>
         <div className={styles.img}>
           <Image
